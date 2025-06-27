@@ -29,17 +29,7 @@ import {
   Globe
 } from 'lucide-react';
 
-// Mock API function
-const createShortUrl = async (input) => {
-  await new Promise(resolve => setTimeout(resolve, 1500));
-  return {
-    data: {
-      shortLink: `https://short.ly/${Math.random().toString(36).substr(2, 6)}`,
-      expiry: new Date(Date.now() + (input.validity || 60) * 60000).toLocaleString(),
-      originalUrl: input.url
-    }
-  };
-};
+import { createShortUrl } from '../services/api';
 
 function UrlShortenerForm() {
   const [inputs, setInputs] = useState([{ url: '', validity: '', shortcode: '' }]);
