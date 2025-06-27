@@ -12,8 +12,8 @@ const cors = require("cors");
 app.use(express.json());
 
 app.use(cors({
-  origin: process.env.CLIENT_URL || process.env.CLIENT_PORT || 'http://localhost:3000',
-  methods: ['GET', 'POST'],
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true
 }));
 
