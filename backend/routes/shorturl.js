@@ -36,8 +36,12 @@ router.post("/shorturls", async (req, res) => {
 
   await log("backend", "info", "service", `Shortlink created for ${url}`);
 
+  const baseUrl = process.env.VERCEL_URL 
+    ? `https://${process.env.VERCEL_URL}` 
+    : process.env.BASE_URL || 'http://localhost:7000';
+
   res.status(201).json({
-    shortLink: `${process.env.VERCEL_URL || 'http://localhost:7000'}/${code}`,
+    shortLink: `${baseUrl}/${code}`,
     expiry: expiryTime,
   });
 });

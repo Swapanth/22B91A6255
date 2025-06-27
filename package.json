@@ -1,0 +1,17 @@
+{
+  "name": "url-shortener-app",
+  "version": "1.0.0",
+  "description": "URL Shortener Application with Express backend and React frontend",
+  "main": "backend/main.js",
+  "scripts": {
+    "dev": "cd backend && npm run dev",
+    "start": "cd backend && npm start",
+    "build": "cd client && npm run build",
+    "install-backend": "cd backend && npm install",
+    "install-client": "cd client && npm install",
+    "install-all": "npm run install-backend && npm run install-client"
+  },
+  "keywords": ["url-shortener", "express", "react", "vercel"],
+  "author": "",
+  "license": "ISC"
+}
