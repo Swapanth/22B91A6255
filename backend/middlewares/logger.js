@@ -2,7 +2,7 @@ const axios = require("axios");
 require("dotenv").config();
 
 
-const ACCESS_TOKEN = process.env.ACCESS
+const ACCESS_TOKEN = process.env.ACCESS_TOKEN
 const log = async (stack, level, packageName, message) => {
   try {
     // Ensure all string fields are within 48 character limit
